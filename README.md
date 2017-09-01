@@ -13,6 +13,8 @@ node sdk for Tim
 [![Build Status](https://travis-ci.org/SensitiveMix/node-tim.svg?branch=master)](https://travis-ci.org/SensitiveMix/node-tim)
 
 ## Installation
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/SensitiveMix/node-request.svg)](https://greenkeeper.io/)
 ```
 yarn add node-tim
 ```

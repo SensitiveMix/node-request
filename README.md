@@ -1,27 +1,24 @@
 ```bash
-                      __                __     _             
-   ____   ____   ____/ /  ___          / /_   (_)   ____ ___ 
-  / __ \ / __ \ / __  /  / _ \ ______ / __/  / /   / __ `__ \
- / / / // /_/ // /_/ /  /  __//_____// /_   / /   / / / / / /
-/_/ /_/ \____/ \__,_/   \___/        \__/  /_/   /_/ /_/ /_/ 
-                                                             
-
+                                                                                 __ 
+  _____   _____   ____ ___           _____  ___   ____ _  __  __  ___    _____  / /_
+ / ___/  / ___/  / __ `__ \ ______  / ___/ / _ \ / __ `/ / / / / / _ \  / ___/ / __/
+/ /__   / /     / / / / / //_____/ / /    /  __// /_/ / / /_/ / /  __/ (__  ) / /_  
+\___/  /_/     /_/ /_/ /_/        /_/     \___/ \__, /  \__,_/  \___/ /____/  \__/  
+                                                  /_/                               
 ```
-node sdk for Tim
-
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/SensitiveMix/node-tim.svg?branch=master)](https://travis-ci.org/SensitiveMix/node-tim)
 
 ## Installation
 ```
-yarn add node-tim
+yarn add crm-request
 ```
 
 ## Options
 Initialize Tim plugin with the given options.
 
 ```JavaScript
-Tim(access_token, { host: "", protocol: "" })
+crm_request(access_token, { host: "", protocol: "" })
 ```
 Options:
 
@@ -33,10 +30,10 @@ Options:
 
 * callback
 ```JavaScript
-let accessToken = 'Tim accessToken'
-let tim = new Tim(accessToken)
+let accessToken = 'crm accessToken'
+let crm = new crm_request(accessToken)
 
-tim.get('/users/me', (err, data) => {
+crm.get('/users/me', (err, data) => {
   // user's profile
   if (err) throw err
   console.log(data)
@@ -46,9 +43,9 @@ tim.get('/users/me', (err, data) => {
 
 * promise
 ```JavaScript
-let accessToken = 'Tim accessToken'
-let tim = new Tim(accessToken)
-tim
+let accessToken = 'crm accessToken'
+let crm = new crm_request(accessToken)
+crm
   .get('/users/me')
   .then(userprofile => console.log(userprofile))
   .catch(err => console.error(err))
